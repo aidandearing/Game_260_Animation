@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: f56b67d22b0dd134cb449b7e333f8fe8
+timeCreated: 1460324593
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: A:arm_L_jnt
+    100002: A:arm_R_jnt
+    100004: A:axe_R_dynJoint
+    100006: A:axe_R_jnt
+    100008: A:ball_L_end
+    100010: A:ball_L_jnt
+    100012: A:ball_R_end
+    100014: A:ball_R_jnt
+    100016: A:DontTouch_rig_grp
+    100018: A:DontTransform_grp
+    100020: A:elbow_L_jnt
+    100022: A:elbow_R_jnt
+    100024: A:foot_L_jnt
+    100026: A:foot_R_jnt
+    100028: A:head_end
+    100030: A:head_jnt
+    100032: A:hip_jnt
+    100034: A:index01_L_jnt
+    100036: A:index01_R_jnt
+    100038: A:index02_L_jnt
+    100040: A:index02_R_jnt
+    100042: A:index03_L_jnt
+    100044: A:index03_R_jnt
+    100046: A:index04_L_end
+    100048: A:index04_R_end
+    100050: A:joint_grp
+    100052: A:knee_L_jnt
+    100054: A:knee_R_jnt
+    100056: A:middle01_L_jnt
+    100058: A:middle01_R_jnt
+    100060: A:middle02_L_jnt
+    100062: A:middle02_R_jnt
+    100064: A:middle03_L_jnt
+    100066: A:middle03_R_jnt
+    100068: A:middle04_L_end
+    100070: A:middle04_R_end
+    100072: A:neck_jnt
+    100074: A:pinky01_L_jnt
+    100076: A:pinky01_R_jnt
+    100078: A:pinky02_L_jnt
+    100080: A:pinky02_R_jnt
+    100082: A:pinky03_L_jnt
+    100084: A:pinky03_R_jnt
+    100086: A:pinky04_L_end
+    100088: A:pinky04_R_end
+    100090: A:ring01_L_jnt
+    100092: A:ring01_R_jnt
+    100094: A:ring02_L_jnt
+    100096: A:ring02_R_jnt
+    100098: A:ring03_L_jnt
+    100100: A:ring03_R_jnt
+    100102: A:ring04_L_end
+    100104: A:ring04_R_end
+    100106: A:shield_end
+    100108: A:shield_jnt
+    100110: A:shoulder_L_jnt
+    100112: A:shoulder_R_jnt
+    100114: A:spine01_jnt
+    100116: A:spine02_jnt
+    100118: A:spine03_jnt
+    100120: A:spine04_jnt
+    100122: A:spine05_jnt
+    100124: A:thigh_L_jnt
+    100126: A:thigh_R_jnt
+    100128: A:thumb01_L_jnt
+    100130: A:thumb01_R_jnt
+    100132: A:thumb02_L_jnt
+    100134: A:thumb02_R_jnt
+    100136: A:thumb03_L_jnt
+    100138: A:thumb03_R_jnt
+    100140: A:thumb04_L_end
+    100142: A:thumb04_R_end
+    100144: A:torso_jnt
+    100146: A:wrist_L_jnt
+    100148: A:wrist_R_jnt
+    100150: //RootNode
+    400000: A:arm_L_jnt
+    400002: A:arm_R_jnt
+    400004: A:axe_R_dynJoint
+    400006: A:axe_R_jnt
+    400008: A:ball_L_end
+    400010: A:ball_L_jnt
+    400012: A:ball_R_end
+    400014: A:ball_R_jnt
+    400016: A:DontTouch_rig_grp
+    400018: A:DontTransform_grp
+    400020: A:elbow_L_jnt
+    400022: A:elbow_R_jnt
+    400024: A:foot_L_jnt
+    400026: A:foot_R_jnt
+    400028: A:head_end
+    400030: A:head_jnt
+    400032: A:hip_jnt
+    400034: A:index01_L_jnt
+    400036: A:index01_R_jnt
+    400038: A:index02_L_jnt
+    400040: A:index02_R_jnt
+    400042: A:index03_L_jnt
+    400044: A:index03_R_jnt
+    400046: A:index04_L_end
+    400048: A:index04_R_end
+    400050: A:joint_grp
+    400052: A:knee_L_jnt
+    400054: A:knee_R_jnt
+    400056: A:middle01_L_jnt
+    400058: A:middle01_R_jnt
+    400060: A:middle02_L_jnt
+    400062: A:middle02_R_jnt
+    400064: A:middle03_L_jnt
+    400066: A:middle03_R_jnt
+    400068: A:middle04_L_end
+    400070: A:middle04_R_end
+    400072: A:neck_jnt
+    400074: A:pinky01_L_jnt
+    400076: A:pinky01_R_jnt
+    400078: A:pinky02_L_jnt
+    400080: A:pinky02_R_jnt
+    400082: A:pinky03_L_jnt
+    400084: A:pinky03_R_jnt
+    400086: A:pinky04_L_end
+    400088: A:pinky04_R_end
+    400090: A:ring01_L_jnt
+    400092: A:ring01_R_jnt
+    400094: A:ring02_L_jnt
+    400096: A:ring02_R_jnt
+    400098: A:ring03_L_jnt
+    400100: A:ring03_R_jnt
+    400102: A:ring04_L_end
+    400104: A:ring04_R_end
+    400106: A:shield_end
+    400108: A:shield_jnt
+    400110: A:shoulder_L_jnt
+    400112: A:shoulder_R_jnt
+    400114: A:spine01_jnt
+    400116: A:spine02_jnt
+    400118: A:spine03_jnt
+    400120: A:spine04_jnt
+    400122: A:spine05_jnt
+    400124: A:thigh_L_jnt
+    400126: A:thigh_R_jnt
+    400128: A:thumb01_L_jnt
+    400130: A:thumb01_R_jnt
+    400132: A:thumb02_L_jnt
+    400134: A:thumb02_R_jnt
+    400136: A:thumb03_L_jnt
+    400138: A:thumb03_R_jnt
+    400140: A:thumb04_L_end
+    400142: A:thumb04_R_end
+    400144: A:torso_jnt
+    400146: A:wrist_L_jnt
+    400148: A:wrist_R_jnt
+    400150: //RootNode
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

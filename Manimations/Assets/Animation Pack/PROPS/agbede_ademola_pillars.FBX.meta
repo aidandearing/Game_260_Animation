@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 17329b45baede9b4988fea03706e9e04
+timeCreated: 1460323961
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera001
+    100004: Camera001.Target
+    100006: Cylinder021
+    100008: Cylinder022
+    100010: miAreaLight001
+    100012: miAreaLight001.Target
+    100014: Plane001
+    100016: Rectangle012
+    100018: Rectangle012_MeshPart0
+    100020: Rectangle012_MeshPart1
+    100022: Rectangle012_MeshPart2
+    100024: Rectangle012_MeshPart3
+    100026: Rectangle012_MeshPart4
+    100028: Rectangle012_MeshPart5
+    100030: Sky001
+    100032: sphere_1
+    400000: //RootNode
+    400002: Camera001
+    400004: Camera001.Target
+    400006: Cylinder021
+    400008: Cylinder022
+    400010: miAreaLight001
+    400012: miAreaLight001.Target
+    400014: Plane001
+    400016: Rectangle012
+    400018: Rectangle012_MeshPart0
+    400020: Rectangle012_MeshPart1
+    400022: Rectangle012_MeshPart2
+    400024: Rectangle012_MeshPart3
+    400026: Rectangle012_MeshPart4
+    400028: Rectangle012_MeshPart5
+    400030: Sky001
+    400032: sphere_1
+    2300000: Cylinder021
+    2300002: Cylinder022
+    2300004: Plane001
+    2300006: Rectangle012_MeshPart0
+    2300008: Rectangle012_MeshPart1
+    2300010: Rectangle012_MeshPart2
+    2300012: Rectangle012_MeshPart3
+    2300014: Rectangle012_MeshPart4
+    2300016: Rectangle012_MeshPart5
+    2300018: sphere_1
+    3300000: Cylinder021
+    3300002: Cylinder022
+    3300004: Plane001
+    3300006: Rectangle012_MeshPart0
+    3300008: Rectangle012_MeshPart1
+    3300010: Rectangle012_MeshPart2
+    3300012: Rectangle012_MeshPart3
+    3300014: Rectangle012_MeshPart4
+    3300016: Rectangle012_MeshPart5
+    3300018: sphere_1
+    4300000: Rectangle012_MeshPart0
+    4300002: Rectangle012_MeshPart1
+    4300004: Rectangle012_MeshPart2
+    4300006: Rectangle012_MeshPart3
+    4300008: Rectangle012_MeshPart4
+    4300010: Rectangle012_MeshPart5
+    4300012: Cylinder021
+    4300014: Cylinder022
+    4300016: Plane001
+    4300018: sphere_1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
