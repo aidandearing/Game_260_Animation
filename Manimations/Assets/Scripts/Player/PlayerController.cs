@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
         if (anim.IsName("Walk") || anim.IsName("Run") || anim.IsName("Shield Charge"))
         {
-            if (state == State.run && anim.IsName("Run"))
+            if (state == State.run && (anim.IsName("Run") || anim.IsName("Shield Charge")))
             {
                 movement *= 3.0f;
             }
