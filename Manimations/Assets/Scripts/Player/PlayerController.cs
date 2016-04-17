@@ -5,9 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public Animator selfAnimator;
     public Rigidbody selfRigid;
-
-    // 10
-    enum AnimatorParameters { walkingSpeed, isWalking, isAttacking, isBlocking, isGrabbing, isTaunting, isRunning, isAttacked, isStunned, isDead };
+    
     enum State { start, idle, walk, run, attack, block, bash, charge, dead };
 
     State state = State.idle;
@@ -18,7 +16,6 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        selfAnimator.SetFloat("movementSpeed", 0.0f);
         selfAnimator.SetBool("isWalking", false);
         selfAnimator.SetBool("isAttacking", false);
         selfAnimator.SetBool("isBlocking", false);
@@ -28,6 +25,7 @@ public class PlayerController : MonoBehaviour
         selfAnimator.SetBool("isAttacked", false);
         selfAnimator.SetBool("isStunned", false);
         selfAnimator.SetBool("isDead", false);
+        selfAnimator.SetBool("isIdle", true);
     }
 
     // Update is called once per frame
@@ -132,7 +130,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 0.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", false);
                     selfAnimator.SetBool("isBlocking", false);
@@ -149,7 +146,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 1.0f);
                     selfAnimator.SetBool("isWalking", true);
                     selfAnimator.SetBool("isAttacking", false);
                     selfAnimator.SetBool("isBlocking", false);
@@ -166,7 +162,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 1.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", false);
                     selfAnimator.SetBool("isBlocking", false);
@@ -183,7 +178,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 0.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", true);
                     selfAnimator.SetBool("isBlocking", false);
@@ -200,7 +194,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 0.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", false);
                     selfAnimator.SetBool("isBlocking", true);
@@ -217,7 +210,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 0.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", false);
                     selfAnimator.SetBool("isBlocking", false);
@@ -234,7 +226,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 0.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", true);
                     selfAnimator.SetBool("isBlocking", true);
@@ -251,7 +242,6 @@ public class PlayerController : MonoBehaviour
                 // This is newly changed
                 if (state != stateLast)
                 {
-                    selfAnimator.SetFloat("movementSpeed", 0.0f);
                     selfAnimator.SetBool("isWalking", false);
                     selfAnimator.SetBool("isAttacking", false);
                     selfAnimator.SetBool("isBlocking", true);
