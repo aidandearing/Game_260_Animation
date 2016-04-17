@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    public SpawnPoint spawn;
     public Animator selfAnimator;
     public Rigidbody selfRigid;
     
@@ -220,7 +221,12 @@ public class PlayerController : MonoBehaviour
                     selfAnimator.SetBool("isStunned", false);
                     selfAnimator.SetBool("isDead", true);
                     selfAnimator.SetBool("isIdle", false);
+
+                    //spawn.Respawn(this);
                 }
+
+                // Some timing logic
+                //transform.position = spawn.transform.position;
                 break;
             case State.bash:
                 // This is newly changed
@@ -259,13 +265,20 @@ public class PlayerController : MonoBehaviour
         stateLast = state;
     }
 
-    public void Attacked(PlayerController attacker)
-    {
-
-    }
-
     void Attack()
     {
+        // Instantiate the attack 'projectile'
+    }
 
+    public void Attacked(PlayerController attacker)
+    {
+        // This is used for specific logic
+        // Which is a very generic comment.
+    }
+
+    public void Respawn()
+    {
+        // Any other logic for respawning should go here too
+        state = State.idle;
     }
 }
