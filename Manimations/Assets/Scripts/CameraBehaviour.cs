@@ -1,32 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraBehaviour : MonoBehaviour {
+public class CameraBehaviour : MonoBehaviour
+{
+    public static Vector3 COM;
 
-	GameObject[] players;
-	// Use this for initialization
-	void Start () {
-		players = GameObject.FindGameObjectsWithTag("Player");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		Vector3 com = Vector3.zero;
+    GameObject[] players;
+    // Use this for initialization
+    void Start()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+    }
 
-		foreach (GameObject player in players)
-		{
-			com += player.transform.position;
-		}
-		com /= players.Length;
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 com = Vector3.zero;
 
-		float distFromCom = float.NegativeInfinity;
+        foreach (GameObject player in players)
+        {
+            com += player.transform.position;
+        }
+        com /= players.Length;
+        com = new Vector3(com.x, 0, com.z);
 
-		foreach(GameObject player in players)
-		{
-			distFromCom = Mathf.Max((com - player.transform.position).magnitude, distFromCom);
-		}
+        float distFromCom = float.NegativeInfinity;
 
-		transform.position = com + new Vector3(5 + distFromCom,5 + distFromCom,0);
-	
-	}
+        foreach (GameObject player in players)
+        {
+            distFromCom = Mathf.Max((com - player.transform.position).magnitude, distFromCom);
+        }
+
+        transform.position = com + new Vector3(5 + distFromCom, 5 + distFromCom, 0);
+
+        COM = com;
+    }
 }

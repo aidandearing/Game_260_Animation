@@ -102,17 +102,22 @@ public class PlayerController : MonoBehaviour
 
         if (anim.IsName("Walk") || anim.IsName("Run") || anim.IsName("Shield Charge"))
         {
-            if (state == State.run && (anim.IsName("Run") || anim.IsName("Shield Charge")))
-            {
-                movement *= 3.0f;
-            }
-            else if (state == State.walk && anim.IsName("Walk"))
-            {
-                movement *= 1.5f;
-            }
+            // I need to rotate the movement vector so that +z is toward COM
+            Vector3 delta = CameraBehaviour.COM - transform.position;
+            float angle = Mathf.Atan2(delta.z, delta.x);
+            movement = new Vector3(movement.z, 0, movement.x);
+            movement = new Vector3(movement.x * Mathf.Cos(angle) - movement.z * Mathf.Sin(angle), 0, movement.x * Mathf.Sin(angle) + movement.z * Mathf.Cos(angle));
 
             selfRigid.MovePosition(transform.position + movement * Time.deltaTime);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.1f);
+
+            if (movement.magnitude > 0)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.1f);
+            }
+        }
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(CameraBehaviour.COM - transform.position), 0.1f);
         }
     }
 
@@ -222,11 +227,8 @@ public class PlayerController : MonoBehaviour
                     selfAnimator.SetBool("isDead", true);
                     selfAnimator.SetBool("isIdle", false);
 
-                    //spawn.Respawn(this);
+                    spawn.Respawn();
                 }
-
-                // Some timing logic
-                //transform.position = spawn.transform.position;
                 break;
             case State.bash:
                 // This is newly changed

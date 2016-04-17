@@ -30,7 +30,7 @@ public class SpawnPoint : MonoBehaviour {
 		}
 
 	}
-	void Respawn()
+	public void Respawn()
 	{
 		playerDead = true;
 	}
