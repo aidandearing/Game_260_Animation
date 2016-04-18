@@ -1,18 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public class AttackTimer
+{
+    const float ATTACKDELAY = 20 / 60;
+    const float ATTACKCOOLDOWN = 2;
+
+    float attackTimer = 0;
+    PlayerController parent;
+
+    public AttackTimer(PlayerController parent)
+    {
+        Debug.Log("AttackTimer made");
+        this.parent = parent;
+    }
+
+    public bool Update()
+    {
+        attackTimer += Time.deltaTime;
+
+        if (attackTimer >= ATTACKDELAY)
+        {
+            if (parent != null)
+            {
+                parent.Attack();
+                parent = null;
+            }
+
+            if (attackTimer >= ATTACKCOOLDOWN)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
+
 public class PlayerController : MonoBehaviour
 {
+    public PlayerController enemy;
     public SpawnPoint spawn;
     public Animator selfAnimator;
     public Rigidbody selfRigid;
-    
+    public int playerIndex = 0;
+
     enum State { start, idle, walk, run, attack, block, bash, charge, dead };
 
     State state = State.idle;
     State stateLast = State.start;
 
     bool isAttacked = false;
+    AttackTimer attackTimer;
 
     // Use this for initialization
     void Start()
@@ -32,7 +71,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        state = State.idle;
+        if (state != State.dead)
+        {
+            state = State.idle;
+        }
+
+        if (attackTimer != null)
+        {
+            if (!attackTimer.Update())
+            {
+                attackTimer = null;
+            }
+        }
 
         UpdateInput();
         UpdateState();
@@ -115,9 +165,13 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.1f);
             }
         }
-        else
+
+        if (anim.IsName("Attack"))
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(CameraBehaviour.COM - transform.position), 0.1f);
+            if (attackTimer == null)
+            {
+                attackTimer = new AttackTimer(this);
+            }
         }
     }
 
@@ -267,15 +321,32 @@ public class PlayerController : MonoBehaviour
         stateLast = state;
     }
 
-    void Attack()
+    public void Attack()
     {
-        // Instantiate the attack 'projectile'
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit[] hits = Physics.SphereCastAll(ray, 2, 1);
+
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider.gameObject.tag == "Player")
+            {
+                if (hit.collider.gameObject != this.gameObject)
+                {
+                    hit.collider.gameObject.SendMessage("Attacked", this);
+                }
+            }
+        }
     }
 
     public void Attacked(PlayerController attacker)
     {
         // This is used for specific logic
         // Which is a very generic comment.
+        if (state != State.block)
+        {
+            Debug.Log("Die");
+            state = State.dead;
+        }
     }
 
     public void Respawn()
